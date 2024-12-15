@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Google</title>
+    <link rel="stylesheet" href="estilos/Google.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+   
+    <button class="boton-regresar" onclick="window.location.href='login.html';">Regresar</button>
+
+    <div class="contenedor">
+        <div class="contenedor-principal">
+            <div class="contenedor-formulario">
+                <h1 class="logo">Google</h1>
+                <form>
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                    <label for="contrasena">Contraseña:</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                    <div class="captcha">
+                        <input type="checkbox" id="captcha" required>
+                        <label for="captcha">No soy un robot</label>
+                    </div>
+                    <button type="submit" class="boton-iniciar">Iniciar sesión</button>
+                </form>
+            </div>
+            <div class="contenedor-imagen">
+                <img src="Imagenes/Logo_Google-512.webp" alt="Imagen de ejemplo">
+            </div>
+        </div>
+    </div>
+    <footer class="custom-footer">
+      <div class="footer-section">
+        <p>© 2024 Entertainment</p>
+      </div>
+      <div class="footer-section">
+        <p>Nuestra página web brinda a todos los usuarios contenido en línea del mundo del entretenimiento.</p>
+      </div>
+      <div class="footer-section">
+        <p>Visita nuestras redes sociales.</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+  </footer>
+</body>
+</html>

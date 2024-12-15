@@ -1,0 +1,129 @@
+/* estilos.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.boton-regresar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #ef8df8;
+    border: 1px solid #9e9e9e;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.contenedor-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.contenedor-formulario {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.1);
+    width: 40%; /* Reducido de 50% a 40% */
+}
+
+.logo {
+    font-size: 3em;
+    color: #e24af0;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-size: 1em;
+}
+
+input[type="email"], input[type="password"] {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ef8df8;
+    border-radius: 5px;
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.captcha label {
+    margin: 0;
+}
+
+.boton-iniciar {
+    background-color: #ef8df8;
+    color: rgb(3, 3, 3);
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contenedor-imagen {
+    width: 45%;
+    text-align: center;
+}
+
+.contenedor-imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.custom-footer {
+    background-color: #2e2b2b;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+    margin-top: 100px; /* Desplaza el footer más abajo */
+}
+
+.footer-section {
+    text-align: center;
+    flex: 1;
+    padding: 0.5rem;
+}
+
+.footer-section p {
+    margin: 0.5rem 0;
+}
+
+.social-icons i {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #ef8df8;
+}

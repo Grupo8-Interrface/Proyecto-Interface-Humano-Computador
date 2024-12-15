@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .wide-header, .wide-footer {
+    background-color: #82e0ff;
+    width: 100%; 
+  }
+  
+  .wide-header {
+    height: 50px; 
+  }
+  
+  .wide-footer {
+    background-color: #2e2b2b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0; 
+    width: 100%; 
+  }
+  
+  
+  .blank-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    height: 70vh;
+    text-align: center;
+  }
+  
+  .blank-state-image {
+    width: 220px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    animation: shake 1.5s infinite;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+  }
+  
+  .blank-state-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .blank-state-message {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+  }
+  
+  .blank-state-button {
+    background-color: #82e0ff;
+    color: #070707;
+    border: none;   
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .blank-state-button:hover {
+    background-color: #faf617;
+  }
+  

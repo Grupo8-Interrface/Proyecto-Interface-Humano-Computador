@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca en Línea</title>
+    <link rel="stylesheet" href="estilos/carrito.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header class="barra-navegacion">
+        <div class="logo">
+            <img src="https://png.pngtree.com/png-vector/20240204/ourmid/pngtree-owl-reading-a-book-smart-and-cute-cartoon-character-png-image_11538738.png" alt="Logo" class="logo-img">
+        </div>
+        <nav class="botones-interactivos">
+          <button class="boton-navegacion" onclick="window.location.href='general.html';">Inicio</button>
+          <button class="boton-navegacion" onclick="window.location.href='biblioteca.html';">Biblioteca</button>
+          <button class="boton-navegacion" onclick="window.location.href='Creacion.html';">Historias</button>
+          <button class="boton-navegacion" onclick="window.location.href='foro.html';">Foro</button>
+        </nav>
+        <div class="notificaciones" id="notificaciones-icono">🔔</div>
+        <!-- Ventana de Notificaciones -->
+        <div id="notificaciones-ventana" class="notificaciones-ventana">
+          <p><strong>Notificaciones:</strong></p>
+          <ul>
+            <li>Tienes un nuevo mensaje.</li>
+            <li>Tu historia fue aprobada.</li>
+            <li>Un libro ha sido añadido a la biblioteca.</li>
+          </ul>
+        </div>
+        <div class="icono-perfil" onclick="window.location.href='perfil.html';">👤</div>
+      </header>
+<div class="book-container">
+    <!-- Libro 1 -->
+    <div class="book-card">
+        <img src="Imagenes/la pareja de alado.jpg" alt="Libro 1">
+        <h3>La pareja de al lado</h3>
+        <p>En el electrizante thriller psicológico de Shari Lapena.</p>
+        <button onclick="addToCart('La pareja de al lado', 50)">Añadir al Carrito - 50$</button>
+    </div>
+
+    <!-- Libro 2 -->
+    <div class="book-card">
+        <img src="Imagenes/Aquí todos mienten.jpg" alt="Libro 2">
+        <h3>Aquí todos mienten</h3>
+        <p>William Wooler es, a primera vista, un padre y marido entregado.</p>
+        <button onclick="addToCart('Aquí todos mienten', 40)">Añadir al Carrito - 40$</button>
+    </div>
+
+    <!-- Libro 3 -->
+    <div class="book-card">
+        <img src="Imagenes/dracula.jpg" alt="Libro 3">
+        <h3>Drácula</h3>
+        <p>Drácula, publicada en 1897 ha llegado al cine, el teatro y la televisión.</p>
+        <button onclick="addToCart('Drácula', 35)">Añadir al Carrito - 35$</button>
+    </div>
+
+    <!-- Libro 4 -->
+    <div class="book-card">
+        <img src="Imagenes/Misery.jpg" alt="Libro 4">
+        <h3>Misery</h3>
+        <p>Paul Sheldon es un escritor que sufre un grave accidente y recobra el conocimiento en una apartada casa.</p>
+        <button onclick="addToCart('Misery', 20)">Añadir al Carrito - 20$</button>
+    </div>
+
+    <!-- Libro 5 -->
+    <div class="book-card">
+        <img src="Imagenes/Un invitado inesperado.jpg" alt="Libro 5">
+        <h3>Un invitado inesperado</h3>
+        <p>Shari Lapena trabajó como abogada y profesora de inglés antes de dedicarse a escribir. Su primera novela de intriga,.</p>
+        <button onclick="addToCart('Misery', 10)">Añadir al Carrito - 10$</button>
+    </div>
+
+    <!-- Libro 6 -->
+    <div class="book-card">
+        <img src="Imagenes/El imperio final.jpg" alt="Libro 6">
+        <h3>El imperio final</h3>
+        <p>El imperio final es una novela de fantasía escrita por el autor estadounidense Brandon Sanderson.</p>
+        <button onclick="addToCart('Misery', 30)">Añadir al Carrito - 30$</button>
+    </div>
+
+    <!-- Libro 7 -->
+    <div class="book-card">
+        <img src="Imagenes/El nombre del viento.webp" alt="Libro 7">
+        <h3>El nombre del viento</h3>
+        <p>El nombre del viento. Crónica del asesino de reyes: primer día título original: The Name of the Wind. The Kingkiller Chronicl.</p>
+        <button onclick="addToCart('Misery', 38)">Añadir al Carrito - 38$</button>
+    </div>
+
+    <!-- Libro 8 -->
+    <div class="book-card">
+        <img src="Imagenes/El hobbit.webp" alt="Libro 8">
+        <h3>El hobbit</h3>
+        <p>Narra la historia del hobbit Bilbo Bolsón, que junto con el mago Gandalf y un grupo de enanos,</p>
+        <button onclick="addToCart('Misery', 40)">Añadir al Carrito - 40$</button>
+    </div>
+</div>
+
+<div class="cart">
+    <h3>Carrito de Compras</h3>
+    <table class="cart-table" id="cartTable">
+        <thead>
+            <tr>
+                <th>Libro</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Carrito vacío inicialmente -->
+        </tbody>
+    </table>
+    <div class="cart-summary">
+        <p id="totalPrice">Total: 0$</p>
+        <button onclick="checkout()">Comprar Todo</button>
+    </div>
+</div>
+
+<footer class="custom-footer">
+    <div class="footer-section">
+      <p>© 2024 Entertainment</p>
+    </div>
+    <div class="footer-section">
+      <p>Nuestra página web brinda a todos los usuarios contenido en línea del mundo del entretenimiento.</p>
+    </div>
+    <div class="footer-section">
+      <p>Visita nuestras redes sociales.</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+  </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const notificacionesIcono = document.getElementById("notificaciones-icono");
+      const notificacionesVentana = document.getElementById("notificaciones-ventana");
+
+      // Mostrar/Ocultar ventana de notificaciones
+      notificacionesIcono.addEventListener("click", function(event) {
+        event.stopPropagation();
+        if (notificacionesVentana.style.display === "block") {
+          notificacionesVentana.style.display = "none";
+        } else {
+          notificacionesVentana.style.display = "block";
+        }
+      });
+
+      // Cerrar la ventana al hacer clic fuera
+      document.addEventListener("click", function(event) {
+        if (!notificacionesVentana.contains(event.target) && event.target !== notificacionesIcono) {
+          notificacionesVentana.style.display = "none";
+        }
+      });
+    });
+    let cart = [];
+
+    function addToCart(book, price) {
+        const existingBook = cart.find(item => item.book === book);
+        if (existingBook) {
+            existingBook.quantity++;
+            existingBook.total = existingBook.quantity * existingBook.price;
+        } else {
+            cart.push({
+                book,
+                price,
+                quantity: 1,
+                total: price
+            });
+        }
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartTable = document.getElementById("cartTable").getElementsByTagName("tbody")[0];
+        cartTable.innerHTML = '';
+        let total = 0;
+
+        cart.forEach(item => {
+            const row = cartTable.insertRow();
+            row.innerHTML = `
+                <td>${item.book}</td>
+                <td>${item.price}$</td>
+                <td>${item.quantity}</td>
+                <td>${item.total}$</td>
+            `;
+            total += item.total;
+        });
+
+        document.getElementById("totalPrice").textContent = `Total: ${total}$`;
+    }
+
+    function checkout() {
+        alert('Gracias por tu compra. Total: ' + document.getElementById("totalPrice").textContent);
+        cart = [];
+        updateCart();
+    }
+
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imperio</title>
+    <link rel="stylesheet" href="estilos/resumen_imperio.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+      <header class="barra-navegacion">
+        <div class="logo">
+            <img src="https://png.pngtree.com/png-vector/20240204/ourmid/pngtree-owl-reading-a-book-smart-and-cute-cartoon-character-png-image_11538738.png" alt="Logo" class="logo-img">
+        </div>
+        <nav class="botones-interactivos">
+          <button class="boton-navegacion" onclick="window.location.href='general.html';">Inicio</button>
+          <button class="boton-navegacion" onclick="window.location.href='biblioteca.html';">Biblioteca</button>
+          <button class="boton-navegacion" onclick="window.location.href='Creacion.html';">Historias</button>
+          <button class="boton-navegacion" onclick="window.location.href='foro.html';">Foro</button>
+        </nav>
+        <div class="notificaciones" id="notificaciones-icono">🔔</div>
+        <!-- Ventana de Notificaciones -->
+        <div id="notificaciones-ventana" class="notificaciones-ventana">
+          <p><strong>Notificaciones:</strong></p>
+          <ul>
+            <li>Tienes un nuevo mensaje.</li>
+            <li>Tu historia fue aprobada.</li>
+            <li>Un libro ha sido añadido a la biblioteca.</li>
+          </ul>
+        </div>
+        <div class="icono-perfil" onclick="window.location.href='perfil.html';">👤</div>
+      </header>
+
+        <!-- Sección principal -->
+        <main class="main">
+            <div class="resumen">
+                <h2>Resumen</h2>
+                <p>El imperio final tiene lugar en un equivalente a principios del siglo XVIII, en el distópico mundo de Scadrial, donde cae ceniza constantemente del cielo, las plantas son color café, y brumas sobrenaturales cubren el paisaje cada noche. Mil años antes del inicio de la novela, el profetizado Héroe de las Eras ascendió a la divinidad en el Pozo de la ascensión para repeler la Profundidad, un terror que acecha el mundo, cuya naturaleza real se ha perdido con el tiempo. Aunque la Profundidad fue exitosamente repelida y la humanidad se salvó, el mundo fue cambiado a su forma actual por el Héroe, quién tomó el título "Lord Legislador" y ha gobernado sobre el Imperio Final por mil años como un tirano inmortal y dios. Bajo su reinado, la sociedad fue estratificada en la nobleza, que se cree que fueron los descendientes de los amigos y aliados que le ayudaron a conseguir la divinidad, y los skaa, el campesinado brutalmente oprimido que desciende de aquellos que se opusieron a él.</p>
+                <button onclick="window.location.href='carrito.html';">Comprar</button>
+        </main>
+    </div>
+    <footer class="custom-footer">
+        <div class="footer-section">
+          <p>© 2024 Entertainment</p>
+        </div>
+        <div class="footer-section">
+          <p>Nuestra página web brinda a todos los usuarios contenido en línea del mundo del entretenimiento.</p>
+        </div>
+        <div class="footer-section">
+          <p>Visita nuestras redes sociales.</p>
+          <div class="social-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </footer>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+      const notificacionesIcono = document.getElementById("notificaciones-icono");
+      const notificacionesVentana = document.getElementById("notificaciones-ventana");
+
+      // Mostrar/Ocultar ventana de notificaciones
+      notificacionesIcono.addEventListener("click", function(event) {
+        event.stopPropagation();
+        if (notificacionesVentana.style.display === "block") {
+          notificacionesVentana.style.display = "none";
+        } else {
+          notificacionesVentana.style.display = "block";
+        }
+      });
+
+      // Cerrar la ventana al hacer clic fuera
+      document.addEventListener("click", function(event) {
+        if (!notificacionesVentana.contains(event.target) && event.target !== notificacionesIcono) {
+          notificacionesVentana.style.display = "none";
+        }
+      });
+    });
+    </script>
+</body>
+</html>
